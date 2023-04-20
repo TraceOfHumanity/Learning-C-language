@@ -3,31 +3,20 @@
 
 int main()
 {
+    char color[20];
+    char pluarNoun[20];
+    char celebrity[20];
 
-    // int age;
-    // printf("Enter Your age: ");
-    // scanf("%d", &age);
-    // printf("You are %d years old \n", age);
+    printf("enter a Color: ");
+    scanf("%s", color);
+    printf("enter a plural noun: ");
+    scanf("%s", pluarNoun);
+    printf("enter a celebrity: ");
+    scanf("%s", celebrity);
 
-    // double gpa;
-    // printf("Enter Your gpa: ");
-    // scanf("%lf", &gpa);
-    // printf("Your gpa is %f \n", gpa);
-
-    // char grade;
-    // printf("Enter Your grade: ");
-    // scanf("%c", &grade);
-    // printf("Your grade is %c \n", grade);
-
-    // char name[20];
-    // printf("Enter Your name: ");
-    // scanf("%s", name);
-    // printf("Your name is %s \n", name);
-
-    char name[20];
-    printf("Enter Your name: ");
-    fgets(name, 20, stdin);
-    printf("Your name is %s \n", name);
+    printf("roses ere %s\n", color);
+    printf("%s are blue\n", pluarNoun);
+    printf("i love %s\n", celebrity);
 
     return 0;
 }
