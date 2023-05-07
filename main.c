@@ -1,26 +1,39 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int max(int num1, int num2, int num3)
+int main()
 {
-    int result;
-    if (num1 >= num2 && num1 >= num3)
+    double num1;
+    double num2;
+    char op;
+
+    printf("enter a number: ");
+    scanf("%lf", &num1);
+    printf("enter operator: ");
+    scanf(" %c", &op);
+    printf("enter a number: ");
+    scanf("%lf", &num2);
+
+    if (op == '+')
     {
-        result = num1;
+        printf("%f", num1 + num2);
     }
-    else if (num2 >= num1 && num2 >= num3)
+    else if (op == '-')
     {
-        result = num2;
+        printf("%f", num1 - num2);
+    }
+    else if (op == '/')
+    {
+        printf("%f", num1 / num2);
+    }
+    else if (op == '*')
+    {
+        printf("%f", num1 * num2);
     }
     else
     {
-        result = num3;
+        printf("invalid opetator");
     }
-    return result;
-}
 
-int main()
-{
-    printf("%d", max(400, 100, 1000));
     return 0;
 }
