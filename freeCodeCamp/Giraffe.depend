@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1681976414 source:c:\users\admin\desktop\giraffe\main.c
-	<stdio.h>
-	<stdlib.h>
-
-1683478258 source:c:\users\admin\desktop\learning-c-language\main.c
-	<stdio.h>
-	<stdlib.h>
-
