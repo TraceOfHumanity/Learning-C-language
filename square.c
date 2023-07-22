@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int quadrado(float x) {
+int square(float x) {
 	float a;
 	printf("enter number\n");
 	scanf_s("%f", &a);
@@ -9,7 +9,7 @@ int quadrado(float x) {
 }
 
 int main() {
-	float t = quadrado(2);
+	float t = square(2);
 	printf("quatro = %f\n", t);
 
 }
