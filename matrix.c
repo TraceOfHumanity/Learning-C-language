@@ -10,7 +10,6 @@ int main() {
 			printf("%d ", m[k][i]);
 		}
 		printf("\n");
-		
 	}
 	return 0;
 }
