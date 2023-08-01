@@ -16,22 +16,24 @@ typedef struct {
 TRacket racket;
 
 typedef struct {
-	int x, y;
+	float x, y;
+	int ix, iy;
 } TBall;
 TBall ball;
 
 void initBall() {
-	ball.x = 2;
-	ball.y = 2;
+	moveBall(2, 2);
 }
 
 void putBall() {
-	mas[ball.y][ball.x] = 'O';
+	mas[ball.iy][ball.ix] = 'O';
 }
 
 void moveBall(int x, int y) {
 	ball.x = x;
 	ball.y = y;
+	ball.ix = (int)round(ball.x);
+	ball.iy = (int)round(ball.y);
 }
 
 void initRacket() {
@@ -89,7 +91,8 @@ int main()
 {
 	initRacket();
 	initBall();
-	
+
+
 	do {
 		setCursor(0, 0);
 		init();
