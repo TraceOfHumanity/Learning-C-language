@@ -15,6 +15,24 @@ typedef struct {
 }TRacket;
 TRacket racket;
 
+typedef struct {
+	int x, y;
+} TBall;
+TBall ball;
+
+void initBall() {
+	ball.x = 2;
+	ball.y = 2;
+}
+
+void putBall() {
+	mas[ball.y][ball.x] = 'O';
+}
+
+void moveBall(int x, int y) {
+	ball.x = x;
+	ball.y = y;
+}
 
 void initRacket() {
 	racket.w = 7;
@@ -46,7 +64,7 @@ void moveRacket(int x) {
 	if (racket.x < 1)
 		racket.x = 1;
 	if (racket.x + racket.w > width - 2)
-		racket.x = width - 2 - racket.w;
+		racket.x = width - 1 - racket.w;
 }
 
 void show()
@@ -70,17 +88,20 @@ void setCursor(int x, int y)
 int main()
 {
 	initRacket();
-
+	initBall();
+	
 	do {
 		setCursor(0, 0);
 		init();
 		putRacket();
+		putBall();
 		show();
 
 		if (GetKeyState('A') < 0)
 			moveRacket(racket.x - 2);
 		if (GetKeyState('D') < 0)
 			moveRacket(racket.x + 2);
+		moveBall(racket.x + racket.w / 2, racket.y - 1);
 		Sleep(10);
 	} while (GetKeyState(VK_ESCAPE) >= 0);
 
