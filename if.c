@@ -2,6 +2,7 @@
 
 int main() {
 	int t = 15;
+	
 	if (t > 10) {
 		printf("t is greater than 10\n");
 		if (t > 12) {
